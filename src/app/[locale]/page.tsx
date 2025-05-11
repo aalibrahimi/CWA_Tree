@@ -71,7 +71,7 @@ export default function LinkTree() {
   }
 
   return (
-    <div className="flex min-h-screen flex-col items-center justify-center bg-gradient-to-b from-slate-900 to-slate-800 p-4 md:p-8">
+    <div className="flex min-h-screen flex-col items-center justify-center bg-gradient-to-b from-blue-980 to-blue-800 p-4 md:p-8">
       <Card className="w-full max-w-md overflow-hidden bg-black/20 backdrop-blur-lg border-none">
         <CardContent className="p-6">
           <motion.div
