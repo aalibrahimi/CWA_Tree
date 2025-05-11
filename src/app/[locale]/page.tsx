@@ -51,6 +51,10 @@ export default function LinkTree() {
     },
   ]
 
+
+  // The parent `motion.div` has the `container` variants applied 
+  // Each child `motion.div` which  I put in the map function, has the `item` variants applied
+  // when the parent is told to animate "show" state -> the children that follows stagger behind which in turn makes a nice clean cascading effect wwhere each link aappears one after another 
   const container = {
     hidden: { opacity: 0 },
     show: {
@@ -77,6 +81,7 @@ export default function LinkTree() {
             className="flex flex-col items-center space-y-6"
           >
             <motion.div whileHover={{ scale: 1.05 }} transition={{ type: "spring", stiffness: 300 }}>
+              {/* might just replace this with an image */}
               <Avatar className="h-24 w-24 border-2 border-white/20">
                 <AvatarImage src="/placeholder.svg?height=96&width=96" alt="Profile" />
                 <AvatarFallback className="bg-gradient-to-br from-violet-500 to-fuchsia-500 text-white text-xl">
@@ -109,6 +114,8 @@ export default function LinkTree() {
                 <motion.div
                   key={index}
                   variants={item}
+                  // I usedd onMouseEnter and Leave insted of hover in tailwindcss because I need to control multiple elements that needs to react when im hovering over them
+                  // the icon scaling, the background color change, sliding animation ( its possible to do it in tailwindcss but Its more work and more complex)
                   onMouseEnter={() => setHoveredIndex(index)}
                   onMouseLeave={() => setHoveredIndex(null)}
                 >
@@ -119,6 +126,10 @@ export default function LinkTree() {
                         hoveredIndex === index ? link.color : "bg-white/10"
                       } transition-all duration-300 hover:text-white`}
                     >
+                         {/* I just recently lerned this is pretty neat
+                          but in motion we can use condditional Rendering
+                          The code conditionally renders the sliding background only when the item is hovered
+                      */}
                       {hoveredIndex === index && (
                         <motion.div
                           className="absolute inset-0 -z-10"
@@ -129,6 +140,8 @@ export default function LinkTree() {
                       )}
                       {link.icon}
                       <span>{link.title}</span>
+                      
+                      {/* This means when hovering over the icon move 5 pixels to the right, if not hovered keep the icon at its original 0 pixel offsettoo */}
                       <motion.div animate={{ x: hoveredIndex === index ? 5 : 0 }} className="ml-auto">
                         <ExternalLink className="h-4 w-4" />
                       </motion.div>
