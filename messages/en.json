@@ -1,0 +1,89 @@
+{
+  "HomePage": {
+    "title": "Hello world!",
+    "about": "Go to the about page"
+  },
+  "NavBar": {
+    "labelSwitchLang": "Switch Language",
+    "labelSelectLang": "Select Language",
+    "dropdown": {
+      "title": "My Account",
+      "item1": "Profile",
+      "item2": "Settings",
+      "item3": "Dashboard",
+      "logout": "Logout"
+    },
+    "labelLang": "Language",
+    "routes": {
+      "home": "Home",
+      "about": "About",
+      "contact": "Contact",
+      "features": {
+        "title": "Features",
+        "content": {
+          "1": {
+            "title": "Feature 1",
+            "desc": "Description for feature 1"
+          },
+          "2": {
+            "title": "Feature 2",
+            "desc": "Description for feature 2"
+          },
+          "3": {
+            "title": "Feature 3",
+            "desc": "Description for feature 3"
+          }
+        }
+      },
+      "resources": {
+        "title": "Resources",
+        "content": {
+          "1": {
+            "title": "Documentation",
+            "desc": "Technical documentation and guides"
+          },
+          "2": {
+            "title": "Blog",
+            "desc": "Latest news and articles"
+          },
+          "3": {
+            "title": "Help Center",
+            "desc": "Support resources and FAQs"
+          }
+        }
+      }
+    }
+  },
+  "Footer": {
+    "compDesc": "Your company description goes here. A brief overview of what your organization does and its mission.",
+    "rights": "Your Company. All rights reserved.",
+    "customLink": "Github",
+    "cwaMark": "Designed By",
+    "nav": {
+      "company": {
+        "title": "Company",
+        "links": {
+          "1": "About",
+          "2": "Careers",
+          "3": "Contact"
+        }
+      },
+      "resources": {
+        "title": "Resources",
+        "links": {
+          "1": "Blog",
+          "2": "Documentation",
+          "3": "Help Center"
+        }
+      },
+      "legal": {
+        "title": "Legal",
+        "links": {
+          "1": "Privacy Policy",
+          "2": "Terms of Service",
+          "3": "Cookie Policy"
+        }
+      }
+    }
+  }
+}
